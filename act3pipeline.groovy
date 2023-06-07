@@ -23,12 +23,12 @@ pipeline {
                 archiveArtifacts artifacts: 'results/*.xml'
             }
         }
-        //stage('API tests') {
-        //    steps {
-         //       sh 'make test-api'
-         //       archiveArtifacts artifacts: 'results/*.xml'
-        //    }
-        //}
+        stage('API tests') {
+            steps {
+                sh 'make test-api'
+                archiveArtifacts artifacts: 'results/*.xml'
+            }
+        }
         //stage('e2e tests') {
             //steps {
                 //sh 'make test-e2e'
