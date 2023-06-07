@@ -39,19 +39,19 @@ pipeline {
     post {
         always {
             junit 'results/*_result.xml'
-            //cleanWs()
+            cleanWs()
         }
-        // success {
-        //     emailext subject: "Pipeline successful", to: "ajunquit@gmail.com"
-        //     cleanWs()
-        // }
+        success {
+            emailext body:"trabajo exitoso" subject: "Pipeline successful", to: "ajunquit@gmail.com"
+            cleanWs()
+        }
         // unstable {
         //     emailext subject: "Pipeline tests not successful", to: "ajunquit@gmail.com"
         //     cleanWs()
         // }
-        // failure {
-        //     emailext subject: "Pipeline error", to: "ajunquit@gmail.com"
-        //     cleanWs()
-        // }
+        failure {
+            emailext body: "trabajo con errores"subject: "Pipeline error", to: "ajunquit@gmail.com"
+            cleanWs()
+        }
     }
 }
