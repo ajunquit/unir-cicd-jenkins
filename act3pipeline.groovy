@@ -42,7 +42,7 @@ pipeline {
             cleanWs()
         }
         success {
-            emailext body:"trabajo exitoso" subject: "Pipeline successful", to: "ajunquit@gmail.com"
+            emailext body: "trabajo exitoso", subject: "Pipeline successful", to: "ajunquit@gmail.com"
             cleanWs()
         }
         // unstable {
