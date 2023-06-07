@@ -49,9 +49,9 @@ pipeline {
         //     emailext subject: "Pipeline tests not successful", to: "ajunquit@gmail.com"
         //     cleanWs()
         // }
-        failure {
-            emailext body: "trabajo con errores"subject: "Pipeline error", to: "ajunquit@gmail.com"
-            cleanWs()
-        }
+        //failure {
+        //    emailext body: "trabajo con errores"subject: "Pipeline error", to: "ajunquit@gmail.com"
+        //    cleanWs()
+        //}
     }
 }
